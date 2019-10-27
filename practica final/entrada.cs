@@ -142,6 +142,7 @@ namespace practica_final
         };
             //foreach (var item in listadoPelis)
             //{
+            
                 newSala[0] = new Sala("Sala 1", 0, listadoPelis[0]);
             //}
 
@@ -154,7 +155,7 @@ namespace practica_final
         }
 
         Pelicula newPeli;
-        Sala [] newSala;
+        Sala [] newSala = new Sala[10];
         List<Pelicula> listadoPelis;
     }
 }
