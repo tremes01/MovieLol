@@ -148,7 +148,7 @@ namespace practica_final
             foreach (var item in listadoPelis)
             {
 
-                newSala[i] = new Sala("Sala " + i, 15, item);
+                newSala[i] = new Sala("Sala " + i + 1, 15, item);
                 i++;
             }
                 

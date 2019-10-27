@@ -42,12 +42,12 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtResena = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtprecio = new System.Windows.Forms.Label();
             this.txtDisponible = new System.Windows.Forms.Label();
             this.txtSala = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.txtprecio = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -216,8 +216,18 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Reservar";
+            this.button1.Text = "Comprar";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtprecio
+            // 
+            this.txtprecio.AutoSize = true;
+            this.txtprecio.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprecio.Location = new System.Drawing.Point(21, 504);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(53, 19);
+            this.txtprecio.TabIndex = 0;
+            this.txtprecio.Text = "Precio: ";
             // 
             // txtDisponible
             // 
@@ -266,16 +276,6 @@
             this.pictureBox9.Size = new System.Drawing.Size(340, 416);
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
-            // 
-            // txtprecio
-            // 
-            this.txtprecio.AutoSize = true;
-            this.txtprecio.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecio.Location = new System.Drawing.Point(21, 504);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(65, 19);
-            this.txtprecio.TabIndex = 0;
-            this.txtprecio.Text = "txtPrecio:";
             // 
             // frmentrada
             // 
