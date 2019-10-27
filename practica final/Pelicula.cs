@@ -8,13 +8,16 @@ namespace practica_final
 {
     public class Pelicula
     {
-        public Pelicula(int id, string nombre, decimal precio, string img)
+        public Pelicula(int id, string nombre, double precio,string resena)
         {
-
+            this.id = id;
+            this.nombre = nombre;
+            this.precio = precio;
+            this.resena = resena;
         }
         public int id { get; set; }
+        public string resena { get; set; }
         public string nombre { get; set; }
-        public decimal precio { get; set; }
-        public string img { get; set; }
+        public double precio { get; set; }
     }
 }

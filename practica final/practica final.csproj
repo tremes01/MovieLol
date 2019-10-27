@@ -56,8 +56,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pelicula.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sala.cs" />
     <EmbeddedResource Include="entrada.resx">
       <DependentUpon>entrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +108,7 @@
     <None Include="Resources\%27.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\error.png" />
     <Content Include="Resources\img1.jpg" />
     <Content Include="Resources\img2.jpg" />
     <Content Include="Resources\img3.jpg" />
