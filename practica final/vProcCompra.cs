@@ -16,5 +16,10 @@ namespace practica_final
         {
             InitializeComponent();
         }
+
+        private void txtprecio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
