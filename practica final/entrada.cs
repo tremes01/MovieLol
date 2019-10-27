@@ -29,9 +29,9 @@ namespace practica_final
             tabControl1.SelectedIndex = 1;
             uploadInfo();
             txtSala.Text = newSala[0].nombre;
-            txtprecio.Text += newSala[0].peli.precio.ToString();
+            txtprecio.Text = newSala[0].peli.precio.ToString();
             txtResena.Text += newSala[0].peli.resena;
-            txtDisponible.Text += newSala[0].cantUser.ToString();
+            txtDisponible.Text = newSala[0].cantUser.ToString();
 
 
         }
@@ -40,43 +40,78 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox2.Image;
             tabControl1.SelectedIndex = 1;
-            
+            uploadInfo();
+            txtSala.Text = newSala[1].nombre;
+            txtprecio.Text = newSala[1].peli.precio.ToString();
+            txtResena.Text += newSala[1].peli.resena;
+            txtDisponible.Text = newSala[1].cantUser.ToString();
+
         }
 
         private void pictureBox3_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox3.Image;
             tabControl1.SelectedIndex = 1;
+            uploadInfo();
+            txtSala.Text = newSala[2].nombre;
+            txtprecio.Text = newSala[2].peli.precio.ToString();
+            txtResena.Text += newSala[2].peli.resena;
+            txtDisponible.Text = newSala[2].cantUser.ToString();
         }
 
         private void pictureBox4_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox4.Image;
             tabControl1.SelectedIndex = 1;
+            uploadInfo();
+            txtSala.Text = newSala[3].nombre;
+            txtprecio.Text = newSala[3].peli.precio.ToString();
+            txtResena.Text += newSala[3].peli.resena;
+            txtDisponible.Text = newSala[3].cantUser.ToString();
         }
 
         private void pictureBox5_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox5.Image;
             tabControl1.SelectedIndex = 1;
+            uploadInfo();
+            txtSala.Text = newSala[4].nombre;
+            txtprecio.Text = newSala[4].peli.precio.ToString();
+            txtResena.Text += newSala[4].peli.resena;
+            txtDisponible.Text = newSala[4].cantUser.ToString();
         }
 
         private void pictureBox6_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox6.Image;
             tabControl1.SelectedIndex = 1;
+            uploadInfo();
+            txtSala.Text = newSala[5].nombre;
+            txtprecio.Text = newSala[5].peli.precio.ToString();
+            txtResena.Text += newSala[5].peli.resena;
+            txtDisponible.Text = newSala[5].cantUser.ToString();
         }
 
         private void pictureBox7_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox7.Image;
             tabControl1.SelectedIndex = 1;
+            uploadInfo();
+            txtSala.Text = newSala[6].nombre;
+            txtprecio.Text = newSala[6].peli.precio.ToString();
+            txtResena.Text += newSala[6].peli.resena;
+            txtDisponible.Text = newSala[6].cantUser.ToString();
         }
 
         private void pictureBox8_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox8.Image;
             tabControl1.SelectedIndex = 1;
+            uploadInfo();
+            txtSala.Text = newSala[7].nombre;
+            txtprecio.Text = newSala[7].peli.precio.ToString();
+            txtResena.Text += newSala[7].peli.resena;
+            txtDisponible.Text = newSala[7].cantUser.ToString();
         }
 
         void uploadInfo()
@@ -148,7 +183,7 @@ namespace practica_final
             foreach (var item in listadoPelis)
             {
 
-                newSala[i] = new Sala("Sala " + i + 1, 15, item);
+                newSala[i] = new Sala("Sala " + i, 15, item);
                 i++;
             }
                 
@@ -161,5 +196,16 @@ namespace practica_final
 
         Sala [] newSala = new Sala[8];
         List<Pelicula> listadoPelis;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            vProcCompra n = new vProcCompra(pictureBox9);
+            n.ShowDialog();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

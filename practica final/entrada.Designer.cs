@@ -43,11 +43,14 @@
             this.txtResena = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtprecio = new System.Windows.Forms.Label();
-            this.txtDisponible = new System.Windows.Forms.Label();
+            this.lb = new System.Windows.Forms.Label();
             this.txtSala = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.txtDisponible = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -61,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -97,12 +101,13 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::practica_final.Properties.Resources.error;
-            this.pictureBox10.Location = new System.Drawing.Point(1004, 6);
+            this.pictureBox10.Location = new System.Drawing.Point(997, 20);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(37, 38);
+            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox8
             // 
@@ -186,10 +191,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox11);
             this.tabPage2.Controls.Add(this.txtResena);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.txtprecio);
             this.tabPage2.Controls.Add(this.txtDisponible);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.lb);
             this.tabPage2.Controls.Add(this.txtSala);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
@@ -212,32 +220,33 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(290, 504);
+            this.button1.Location = new System.Drawing.Point(387, 475);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Comprar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtprecio
             // 
             this.txtprecio.AutoSize = true;
             this.txtprecio.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecio.Location = new System.Drawing.Point(21, 504);
+            this.txtprecio.Location = new System.Drawing.Point(80, 510);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(53, 19);
             this.txtprecio.TabIndex = 0;
             this.txtprecio.Text = "Precio: ";
             // 
-            // txtDisponible
+            // lb
             // 
-            this.txtDisponible.AutoSize = true;
-            this.txtDisponible.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisponible.Location = new System.Drawing.Point(383, 439);
-            this.txtDisponible.Name = "txtDisponible";
-            this.txtDisponible.Size = new System.Drawing.Size(82, 19);
-            this.txtDisponible.TabIndex = 0;
-            this.txtDisponible.Text = "Disponibles:";
+            this.lb.AutoSize = true;
+            this.lb.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.Location = new System.Drawing.Point(383, 439);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(82, 19);
+            this.lb.TabIndex = 0;
+            this.lb.Text = "Disponibles:";
             // 
             // txtSala
             // 
@@ -277,6 +286,36 @@
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
             // 
+            // txtDisponible
+            // 
+            this.txtDisponible.AutoSize = true;
+            this.txtDisponible.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisponible.Location = new System.Drawing.Point(482, 439);
+            this.txtDisponible.Name = "txtDisponible";
+            this.txtDisponible.Size = new System.Drawing.Size(0, 19);
+            this.txtDisponible.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 510);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = " Precio:";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::practica_final.Properties.Resources.error;
+            this.pictureBox11.Location = new System.Drawing.Point(997, 20);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 4;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
             // frmentrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -302,6 +341,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,8 +365,11 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label txtDisponible;
+        private System.Windows.Forms.Label lb;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label txtprecio;
+        private System.Windows.Forms.Label txtDisponible;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
