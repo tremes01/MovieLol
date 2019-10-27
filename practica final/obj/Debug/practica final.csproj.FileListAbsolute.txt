@@ -19,3 +19,13 @@ C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica_final.Properti
 C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica final.csproj.GenerateResource.cache
 C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica final.csproj.CoreCompileInputs.cache
 C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica final.csprojAssemblyReference.cache
+C:\Users\Tremes\Desktop\MovieLol\practica final\bin\Debug\practica final.exe.config
+C:\Users\Tremes\Desktop\MovieLol\practica final\bin\Debug\practica final.exe
+C:\Users\Tremes\Desktop\MovieLol\practica final\bin\Debug\practica final.pdb
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.csprojResolveAssemblyReference.cache
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica_final.frmentrada.resources
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica_final.Form1.resources
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica_final.Properties.Resources.resources
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.csproj.GenerateResource.Cache
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.exe
+C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.pdb
