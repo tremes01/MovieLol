@@ -18,3 +18,4 @@ C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica_final.Form1.re
 C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica_final.Properties.Resources.resources
 C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica final.csproj.GenerateResource.cache
 C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica final.csproj.CoreCompileInputs.cache
+C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica final.csprojAssemblyReference.cache
