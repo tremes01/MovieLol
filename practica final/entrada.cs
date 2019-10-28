@@ -199,13 +199,29 @@ namespace practica_final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            vProcCompra n = new vProcCompra(pictureBox9);
+            vProcCompra n = new vProcCompra(pictureBox9, txtSala.Text, txtprecio.Text, int.Parse(txtDisponible.Text),this);
+            
             n.ShowDialog();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        public int nuevoDisponibles;
+
+        private void frmentrada_Shown(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDisponible.Text))
+            {
+               
+            }
+            else
+            {
+                var nuevoV = newSala[2].cantUser - nuevoDisponibles;
+                txtDisponible.Text = nuevoV.ToString();
+            }
         }
     }
 }
