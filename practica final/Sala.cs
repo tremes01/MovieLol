@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace practica_final
 {
+    /*Aqui almancenaremos todas las salas de cine*/
     public class Sala
     {
 
@@ -19,7 +20,7 @@ namespace practica_final
         public string nombre { get; set; }
         public int cantUser { get; set; }
         public const int maxUser = 15;
-        public Pelicula peli { get; set; }
+        public Pelicula peli { get; set; }/*Aqui almancenaremos las referencias a la peliculas que tenga esta sala.*/
 
     }
 }

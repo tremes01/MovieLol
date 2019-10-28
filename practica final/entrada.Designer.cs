@@ -40,14 +40,25 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.panelCompra = new System.Windows.Forms.Panel();
+            this.txtcantidad = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtdescuento = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txttotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.precioF = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtResena = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtprecio = new System.Windows.Forms.Label();
             this.txtDisponible = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
-            this.txtSala = new System.Windows.Forms.Label();
+            this.txtSala0 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lb2 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -63,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panelCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,10 +82,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(3, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(991, 648);
+            this.tabControl1.Size = new System.Drawing.Size(1051, 639);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -93,21 +104,18 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage1.Size = new System.Drawing.Size(1047, 649);
+            this.tabPage1.Size = new System.Drawing.Size(1043, 610);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Carteleras";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::practica_final.Properties.Resources.error;
-            this.pictureBox10.Location = new System.Drawing.Point(997, 20);
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox10.TabIndex = 0;
             this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox8
             // 
@@ -191,35 +199,133 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.pictureBox11);
+            this.tabPage2.Controls.Add(this.panelCompra);
             this.tabPage2.Controls.Add(this.txtResena);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.txtprecio);
             this.tabPage2.Controls.Add(this.txtDisponible);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.lb);
-            this.tabPage2.Controls.Add(this.txtSala);
+            this.tabPage2.Controls.Add(this.txtSala0);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.lb2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.pictureBox9);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(983, 619);
+            this.tabPage2.Size = new System.Drawing.Size(1043, 610);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detalles";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox11
+            // panelCompra
             // 
-            this.pictureBox11.Image = global::practica_final.Properties.Resources.error;
-            this.pictureBox11.Location = new System.Drawing.Point(997, 20);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 4;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox10_Click);
+            this.panelCompra.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelCompra.Controls.Add(this.txtcantidad);
+            this.panelCompra.Controls.Add(this.button2);
+            this.panelCompra.Controls.Add(this.label4);
+            this.panelCompra.Controls.Add(this.txtdescuento);
+            this.panelCompra.Controls.Add(this.label5);
+            this.panelCompra.Controls.Add(this.txttotal);
+            this.panelCompra.Controls.Add(this.label6);
+            this.panelCompra.Controls.Add(this.precioF);
+            this.panelCompra.Controls.Add(this.label7);
+            this.panelCompra.Enabled = false;
+            this.panelCompra.Location = new System.Drawing.Point(666, 56);
+            this.panelCompra.Name = "panelCompra";
+            this.panelCompra.Size = new System.Drawing.Size(277, 442);
+            this.panelCompra.TabIndex = 5;
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.FormattingEnabled = true;
+            this.txtcantidad.Location = new System.Drawing.Point(186, 24);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(48, 24);
+            this.txtcantidad.TabIndex = 23;
+            this.txtcantidad.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(37, 370);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 32);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Listo!";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(33, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.TabIndex = 12;
+            this.label4.Text = " Cantidad:";
+            // 
+            // txtdescuento
+            // 
+            this.txtdescuento.AutoSize = true;
+            this.txtdescuento.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescuento.Location = new System.Drawing.Point(158, 103);
+            this.txtdescuento.Name = "txtdescuento";
+            this.txtdescuento.Size = new System.Drawing.Size(21, 19);
+            this.txtdescuento.TabIndex = 13;
+            this.txtdescuento.Text = " 0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(33, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 19);
+            this.label5.TabIndex = 14;
+            this.label5.Text = " Descuento:";
+            // 
+            // txttotal
+            // 
+            this.txttotal.AutoSize = true;
+            this.txttotal.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotal.Location = new System.Drawing.Point(134, 147);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(0, 19);
+            this.txttotal.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(33, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 19);
+            this.label6.TabIndex = 16;
+            this.label6.Text = " Total:";
+            // 
+            // precioF
+            // 
+            this.precioF.AutoSize = true;
+            this.precioF.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioF.Location = new System.Drawing.Point(126, 63);
+            this.precioF.Name = "precioF";
+            this.precioF.Size = new System.Drawing.Size(53, 19);
+            this.precioF.TabIndex = 17;
+            this.precioF.Text = "Precio: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(33, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 19);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Precio: ";
             // 
             // txtResena
             // 
@@ -231,7 +337,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(387, 475);
+            this.button1.Location = new System.Drawing.Point(390, 475);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -278,15 +384,34 @@
             this.lb.TabIndex = 0;
             this.lb.Text = "Disponibles:";
             // 
-            // txtSala
+            // txtSala0
             // 
-            this.txtSala.AutoSize = true;
-            this.txtSala.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSala.Location = new System.Drawing.Point(380, 397);
-            this.txtSala.Name = "txtSala";
-            this.txtSala.Size = new System.Drawing.Size(63, 32);
-            this.txtSala.TabIndex = 0;
-            this.txtSala.Text = "Sala:";
+            this.txtSala0.AutoSize = true;
+            this.txtSala0.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSala0.Location = new System.Drawing.Point(449, 397);
+            this.txtSala0.Name = "txtSala0";
+            this.txtSala0.Size = new System.Drawing.Size(0, 32);
+            this.txtSala0.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label8.Location = new System.Drawing.Point(384, 397);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 32);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Sala:";
+            // 
+            // lb2
+            // 
+            this.lb2.AutoSize = true;
+            this.lb2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lb2.Location = new System.Drawing.Point(455, 397);
+            this.lb2.Name = "lb2";
+            this.lb2.Size = new System.Drawing.Size(63, 32);
+            this.lb2.TabIndex = 0;
+            this.lb2.Text = "Sala:";
             // 
             // label2
             // 
@@ -322,10 +447,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 680);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmentrada";
             this.Text = "entrada";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmentrada_FormClosed);
             this.Load += new System.EventHandler(this.frmentrada_Load);
             this.Shown += new System.EventHandler(this.frmentrada_Shown);
             this.tabControl1.ResumeLayout(false);
@@ -341,7 +467,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panelCompra.ResumeLayout(false);
+            this.panelCompra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
@@ -359,7 +486,7 @@
         private System.Windows.Forms.TextBox txtResena;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label txtSala;
+        private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -371,6 +498,17 @@
         private System.Windows.Forms.Label txtprecio;
         private System.Windows.Forms.Label txtDisponible;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Panel panelCompra;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txtdescuento;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txttotal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label precioF;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label txtSala0;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox txtcantidad;
     }
 }

@@ -17,18 +17,21 @@ namespace practica_final
             InitializeComponent();
         }
 
+        /*Evento Load usado para inicializar valores por defecto al iniciar la ventana.*/
         private void frmentrada_Load(object sender, EventArgs e)
         {
-            
+            panelCompra.Visible = false;
+            for (int i = 1; i < 16; i++) txtcantidad.Items.Add(i);
+            uploadInfo();
+
         }
 
-
+        /*Evento double Click , el cual nos permite cargar los datos en la siguiente ventana o tabPage*/
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             pictureBox9.Image = pictureBox1.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[0].nombre;
+            lb2.Text = newSala[0].nombre;
             txtprecio.Text = newSala[0].peli.precio.ToString();
             txtResena.Text += newSala[0].peli.resena;
             txtDisponible.Text = newSala[0].cantUser.ToString();
@@ -40,8 +43,7 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox2.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[1].nombre;
+            lb2.Text = newSala[1].nombre;
             txtprecio.Text = newSala[1].peli.precio.ToString();
             txtResena.Text += newSala[1].peli.resena;
             txtDisponible.Text = newSala[1].cantUser.ToString();
@@ -52,8 +54,7 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox3.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[2].nombre;
+            lb2.Text = newSala[2].nombre;
             txtprecio.Text = newSala[2].peli.precio.ToString();
             txtResena.Text += newSala[2].peli.resena;
             txtDisponible.Text = newSala[2].cantUser.ToString();
@@ -63,8 +64,7 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox4.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[3].nombre;
+            lb2.Text = newSala[3].nombre;
             txtprecio.Text = newSala[3].peli.precio.ToString();
             txtResena.Text += newSala[3].peli.resena;
             txtDisponible.Text = newSala[3].cantUser.ToString();
@@ -74,8 +74,7 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox5.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[4].nombre;
+            lb2.Text = newSala[4].nombre;
             txtprecio.Text = newSala[4].peli.precio.ToString();
             txtResena.Text += newSala[4].peli.resena;
             txtDisponible.Text = newSala[4].cantUser.ToString();
@@ -85,8 +84,7 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox6.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[5].nombre;
+            lb2.Text = newSala[5].nombre;
             txtprecio.Text = newSala[5].peli.precio.ToString();
             txtResena.Text += newSala[5].peli.resena;
             txtDisponible.Text = newSala[5].cantUser.ToString();
@@ -96,8 +94,7 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox7.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[6].nombre;
+            lb2.Text = newSala[6].nombre;
             txtprecio.Text = newSala[6].peli.precio.ToString();
             txtResena.Text += newSala[6].peli.resena;
             txtDisponible.Text = newSala[6].cantUser.ToString();
@@ -107,16 +104,17 @@ namespace practica_final
         {
             pictureBox9.Image = pictureBox8.Image;
             tabControl1.SelectedIndex = 1;
-            uploadInfo();
-            txtSala.Text = newSala[7].nombre;
+            lb2.Text = newSala[7].nombre;
             txtprecio.Text = newSala[7].peli.precio.ToString();
             txtResena.Text += newSala[7].peli.resena;
             txtDisponible.Text = newSala[7].cantUser.ToString();
         }
 
+        /*metodo que nos ayudara a cargar todos los datos a las clases creadas, digase peliculas y las peliculas a sus respectivas salas.*/
         void uploadInfo()
         {
             //Cargar peliculas
+            //List para almacenar las peliculas
             listadoPelis = new List<Pelicula>()
             {
                 new Pelicula(
@@ -180,48 +178,102 @@ namespace practica_final
             //foreach (var item in listadoPelis)
             //{
             int i = 0;
+            //foreach para cargar cada pelicula en sus respectiva sala.
             foreach (var item in listadoPelis)
             {
 
-                newSala[i] = new Sala("Sala " + i, 15, item);
+                newSala[i] = new Sala(i.ToString(), 15, item);
                 i++;
             }
-                
+
             //}
 
-            
+
 
         }
-      
 
-        Sala [] newSala = new Sala[8];
+
+        Sala[] newSala = new Sala[8]; //array para la clase Sala, asi tenemos una sala para cada pelicula.
         List<Pelicula> listadoPelis;
 
+        //con este evento click iniciamos el contenedor del panel de compras
         private void button1_Click(object sender, EventArgs e)
         {
-            vProcCompra n = new vProcCompra(pictureBox9, txtSala.Text, txtprecio.Text, int.Parse(txtDisponible.Text),this);
-            
-            n.ShowDialog();
+            panelCompra.Visible = true; //hacemos visible el panel
+            panelCompra.Enabled = true; //activamos sus manipulacion
+            //llenamos los datos
+            txttotal.Text = txtprecio.Text;
+            precioF.Text = txtprecio.Text;
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
         public int nuevoDisponibles;
 
         private void frmentrada_Shown(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtDisponible.Text))
+           ///NADA
+        }
+
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            int Sala = int.Parse(lb2.Text); //sala actual
+            var cantidad = (string.IsNullOrWhiteSpace(txtcantidad.Text) ? 1 : int.Parse(txtcantidad.Text)); //con el operador condiciona validamos el campo cantidad y pasamos segun lo qe tenga, si esta vacio es decir no selecciono nada, enviara un 1 , de lo contrario el valor seleccionado.
+            string mensaje = $"Desea comprar {cantidad} boletos?"; //mensaje para validar la confrmacion 
+            DialogResult select = MessageBox.Show(mensaje,"Cierre de compra",MessageBoxButtons.YesNo,MessageBoxIcon.Question); //Caja de mensaje para confirmar y segun la eleccion la condicion a continuacion determinara que se hara.
+            if(select == DialogResult.Yes) //si nuestra eleecion dentro de la caja de mensaje es YES, pues realizara las siguientes acciones.
             {
-               
+                panelCompra.Visible = false;
+                if (newSala[Sala].cantUser > 0)
+                {
+                    newSala[Sala].cantUser = newSala[Sala].cantUser - cantidad;
+                    txtDisponible.Text = newSala[Sala].cantUser.ToString();
+                    txtcantidad.Items.Clear();
+                    txtcantidad.Text = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("No quedan acientos disponibles!");
+                }
             }
-            else
+            
+
+            for (int i = 1; i <= newSala[Sala].cantUser; i++) txtcantidad.Items.Add(i); //for loop para cargar el comboBox de cqntidad en funcion al numero restante de acientos.
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cada vez que cambiemos la eleeccion del combo mostrara si hay un descuento , si elegimos el numero 1 o dejamos vacio, no se aplica pero si es superior a 1 entonces le aplica und escuento del 0.20%
+            var cantidad = (string.IsNullOrWhiteSpace(txtcantidad.Text) ? 1 : int.Parse(txtcantidad.Text));
+            var precio = int.Parse(txtprecio.Text);
+            var descuento = (cantidad * precio) * 0.20;
+            var total = cantidad * precio;
+            if (!string.IsNullOrEmpty(txtcantidad.Text) && !string.IsNullOrWhiteSpace(txtcantidad.Text))
             {
-                var nuevoV = newSala[2].cantUser - nuevoDisponibles;
-                txtDisponible.Text = nuevoV.ToString();
+                if (cantidad > 1)
+                {
+                    txtdescuento.Text = descuento.ToString();
+                    var totalResultado = total - descuento;
+                    txttotal.Text = totalResultado.ToString();
+
+                }
+                else
+                {
+                    txtdescuento.Text = 0.ToString();
+                    txttotal.Text = txtprecio.Text;
+                }
             }
+        }
+
+        private void frmentrada_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

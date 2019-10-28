@@ -29,4 +29,3 @@ C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica_final.Propert
 C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.csproj.GenerateResource.Cache
 C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.exe
 C:\Users\Tremes\Desktop\MovieLol\practica final\obj\Debug\practica final.pdb
-C:\Users\Hairo\Desktop\MovieLol\practica final\obj\Debug\practica_final.vProcCompra.resources
