@@ -193,8 +193,8 @@ namespace practica_final
         }
 
 
-        Sala[] newSala = new Sala[8]; //array para la clase Sala, asi tenemos una sala para cada pelicula.
-        List<Pelicula> listadoPelis;
+        Sala[] newSala = new Sala[8]; //array para la clase Sala, asi tenemos una sala para cada pelicula. //lista de objetos tipo Sala
+        List<Pelicula> listadoPelis; //Lista generica de tipo Pelicula, en este caso*
 
         //con este evento click iniciamos el contenedor del panel de compras
         private void button1_Click(object sender, EventArgs e)
@@ -246,10 +246,11 @@ namespace practica_final
 
 
         }
+        //cada vez que cambiemos la eleeccion del comboBox mostrara si hay un descuento , si elegimos el numero 1 o dejamos vacio, no se aplica pero si es superior a 1 entonces le aplica und escuento del 0.20%
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //cada vez que cambiemos la eleeccion del combo mostrara si hay un descuento , si elegimos el numero 1 o dejamos vacio, no se aplica pero si es superior a 1 entonces le aplica und escuento del 0.20%
+            
             var cantidad = (string.IsNullOrWhiteSpace(txtcantidad.Text) ? 1 : int.Parse(txtcantidad.Text));
             var precio = int.Parse(txtprecio.Text);
             var descuento = (cantidad * precio) * 0.20;
