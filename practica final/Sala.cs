@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace practica_final
 {
-    /*Aqui almancenaremos todas las salas de cine*/
+    /*Aqui almancenaremos todas las salas de cine*/ //Creando una instancia u objeto
     public class Sala
     {
 
